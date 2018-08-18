@@ -1,6 +1,6 @@
 ﻿namespace PlataformaGruposInvestigacion
 {
-    partial class Form1
+    partial class interfazPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.

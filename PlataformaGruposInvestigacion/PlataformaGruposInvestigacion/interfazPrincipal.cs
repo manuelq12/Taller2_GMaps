@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlataformaGruposInvestigacion
 {
-    public partial class Form1 : Form
+    public partial class interfazPrincipal : Form
     {
-        public Form1()
+        public interfazPrincipal()
         {
             InitializeComponent();
         }
