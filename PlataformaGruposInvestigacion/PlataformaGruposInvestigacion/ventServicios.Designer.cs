@@ -177,7 +177,7 @@
             this.butActualizar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butActualizar.Location = new System.Drawing.Point(572, 460);
             this.butActualizar.Name = "butActualizar";
-            this.butActualizar.Size = new System.Drawing.Size(164, 49);
+            this.butActualizar.Size = new System.Drawing.Size(185, 49);
             this.butActualizar.TabIndex = 13;
             this.butActualizar.Text = "Actualizar";
             this.butActualizar.UseVisualStyleBackColor = true;
