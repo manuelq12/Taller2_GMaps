@@ -47,6 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(333, 24);
             this.label1.Name = "label1";
@@ -58,6 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(178, 133);
             this.label2.Name = "label2";
@@ -68,6 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(178, 198);
             this.label3.Name = "label3";
@@ -78,6 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(178, 262);
             this.label4.Name = "label4";
@@ -88,6 +92,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(178, 316);
             this.label5.Name = "label5";
@@ -98,6 +103,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(178, 371);
             this.label6.Name = "label6";
@@ -158,7 +164,7 @@
             // butBuscar
             // 
             this.butBuscar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butBuscar.Location = new System.Drawing.Point(326, 460);
+            this.butBuscar.Location = new System.Drawing.Point(340, 460);
             this.butBuscar.Name = "butBuscar";
             this.butBuscar.Size = new System.Drawing.Size(161, 49);
             this.butBuscar.TabIndex = 12;
@@ -168,9 +174,9 @@
             // butActualizar
             // 
             this.butActualizar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butActualizar.Location = new System.Drawing.Point(552, 460);
+            this.butActualizar.Location = new System.Drawing.Point(572, 460);
             this.butActualizar.Name = "butActualizar";
-            this.butActualizar.Size = new System.Drawing.Size(161, 49);
+            this.butActualizar.Size = new System.Drawing.Size(164, 49);
             this.butActualizar.TabIndex = 13;
             this.butActualizar.Text = "Actualizar";
             this.butActualizar.UseVisualStyleBackColor = true;
@@ -180,6 +186,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(825, 571);
             this.Controls.Add(this.butActualizar);
             this.Controls.Add(this.butBuscar);
