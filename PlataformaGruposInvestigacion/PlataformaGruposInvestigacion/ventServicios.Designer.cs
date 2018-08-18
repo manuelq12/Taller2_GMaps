@@ -161,6 +161,7 @@
             this.butRegistrar.TabIndex = 11;
             this.butRegistrar.Text = "Registrar";
             this.butRegistrar.UseVisualStyleBackColor = true;
+            this.butRegistrar.Click += new System.EventHandler(this.butRegistrar_Click);
             // 
             // butBuscar
             // 
@@ -171,6 +172,7 @@
             this.butBuscar.TabIndex = 12;
             this.butBuscar.Text = "Buscar";
             this.butBuscar.UseVisualStyleBackColor = true;
+            this.butBuscar.Click += new System.EventHandler(this.butBuscar_Click);
             // 
             // butActualizar
             // 

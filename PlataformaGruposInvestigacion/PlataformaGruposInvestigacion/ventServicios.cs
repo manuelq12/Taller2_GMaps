@@ -38,5 +38,33 @@ namespace PlataformaGruposInvestigacion
 
 
         }
+
+        private void butBuscar_Click(object sender, EventArgs e)
+        {
+
+            String nombre = txtNombre.Text;
+
+            if (nombre=="")
+            {
+                MessageBox.Show("Ingrese el nombrel grupo de investigación");
+            }
+
+        }
+
+        private void butRegistrar_Click(object sender, EventArgs e)
+        {
+            String nombre = txtNombre.Text;
+            String codigo = txtCodigo.Text;
+            String ciudad = txtCiudad.Text;
+            String areaInvestigacion = txtArea.Text;
+            String region = txtRegion.Text;
+
+            if (nombre == "" || codigo == "" || ciudad == "" || areaInvestigacion == "" || region == "") ;
+            {
+                MessageBox.Show("Existe un campo en el registro sin llenar");
+            }
+
+        }
+
     }
 }
