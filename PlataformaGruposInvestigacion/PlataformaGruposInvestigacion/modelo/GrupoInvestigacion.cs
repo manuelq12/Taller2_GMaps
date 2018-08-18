@@ -14,9 +14,9 @@ namespace PlataformaGruposInvestigacion.modelo
         private String areaInvestigacion;
         private String region;
 
-        //-----------------------------------------------------------------------------------------------------------------
-        //Constructor
-        //-----------------------------------------------------------------------------------------------------------------
+       //-----------------------------------------------------------------------------------------------------------------
+       //Constructor
+       //-----------------------------------------------------------------------------------------------------------------
         public GrupoInvestigacion(String nombre, String codigo, String clasificacion, int numArticulos, String ciudad, String areaInvestigacion, String region){
             this.nombre = nombre;
             this.codigo = codigo; 
