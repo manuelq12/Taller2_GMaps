@@ -12,8 +12,10 @@ namespace PlataformaGruposInvestigacion
 {
     public partial class ventServicios : Form
     {
-        public ventServicios()
+        private interfazPrincipal ventana;
+        public ventServicios(interfazPrincipal principal)
         {
+            ventana = principal;
             InitializeComponent();
         }
 
@@ -42,11 +44,21 @@ namespace PlataformaGruposInvestigacion
         private void butBuscar_Click(object sender, EventArgs e)
         {
 
-            String nombre = txtNombre.Text;
+            String codigo = txtCodigo.Text;
 
-            if (nombre=="")
+            if (codigo=="")
             {
-                MessageBox.Show("Ingrese el nombrel grupo de investigación");
+                MessageBox.Show("Ingrese el codigo grupo de investigación");
+            }
+            else{
+                txtNombre.Text = ventana.Buscar(codigo).Nombre;
+                txtCodigo.Text = ventana.Buscar(codigo).Codigo;
+                txtArea.Text = ventana.Buscar(codigo).AreaInvestigacion;
+                txtRegion.Text = ventana.Buscar(codigo).Region;
+                txtClasificacion.Text= ventana.Buscar(codigo).Clasificacion;
+                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString;
+                txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
+
             }
 
         }
@@ -56,12 +68,16 @@ namespace PlataformaGruposInvestigacion
             String nombre = txtNombre.Text;
             String codigo = txtCodigo.Text;
             String ciudad = txtCiudad.Text;
+            String clasificacion = txtClasificacion.Text;
+            String articulos = txtArticulos.Text;
             String areaInvestigacion = txtArea.Text;
             String region = txtRegion.Text;
 
-            if (nombre == "" || codigo == "" || ciudad == "" || areaInvestigacion == "" || region == "") ;
+            if (nombre == "" || codigo == "" || ciudad == "" || areaInvestigacion == "" || region == "") 
             {
                 MessageBox.Show("Existe un campo en el registro sin llenar");
+            }else{
+                ventana.AgregarGrupo(nombre, codigo, clasificacion, articulos, ciudad, areaInvestigacion, region);
             }
 
         }
