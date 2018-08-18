@@ -7,7 +7,7 @@ namespace PlataformaGruposInvestigacion.modelo
      //Atributos
      //-----------------------------------------------------------------------------------------------------------------
         private String nombre;
-        private int codigo;
+        private String codigo;
         private String clasificacion;
         private int numArticulos;
         private String ciudad;
@@ -17,7 +17,7 @@ namespace PlataformaGruposInvestigacion.modelo
         //-----------------------------------------------------------------------------------------------------------------
         //Constructor
         //-----------------------------------------------------------------------------------------------------------------
-        public GrupoInvestigacion(String nombre, int codigo, String clasificacion, int numArticulos, String ciudad, String areaInvestigacion, String region){
+        public GrupoInvestigacion(String nombre, String codigo, String clasificacion, int numArticulos, String ciudad, String areaInvestigacion, String region){
             this.nombre = nombre;
             this.codigo = codigo; 
             this.clasificacion = clasificacion;
@@ -40,7 +40,7 @@ namespace PlataformaGruposInvestigacion.modelo
                 nombre = value;
             }
         }
-        public int Codigo
+        public String Codigo
         {
             get
             {
