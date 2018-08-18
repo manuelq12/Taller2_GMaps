@@ -23,8 +23,10 @@ namespace PlataformaGruposInvestigacion.modelo
             }
             else
             {
-                int art = Int32.Parse(articulos);
-                GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, art, ciudad, area, region);
+                var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
+                List<int> art = new List<int>();
+                art.Union(lista);
+                GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, art , ciudad, area, region);
                 grupos.Add(nuevo);
             }
         }
