@@ -87,7 +87,8 @@
     <EmbeddedResource Include="interfaz\ventServicios.resx">
       <DependentUpon>ventServicios.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="modelo\EmptyCSharpFile.cs" />
+    <Compile Include="modelo\GrupoInvestigacion.cs" />
+    <Compile Include="modelo\Plataforma.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
