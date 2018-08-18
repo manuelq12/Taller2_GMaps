@@ -12,30 +12,33 @@ namespace PlataformaGruposInvestigacion.modelo
         private List<GrupoInvestigacion> grupos;
         private List<int> articulos;
 
+        public List<GrupoInvestigacion> Grupos { get => grupos; set => grupos = value; }
+
         public Plataforma()
         {
-            grupos = new List<GrupoInvestigacion>();
-            
+            Grupos = new List<GrupoInvestigacion>();
+            cargarGruposInvestigacion();
+            cargarArticulos();
         }
 
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region)
         {
            String [] listado = { nombre, codigo, clasificacion, ciudad, area, region };
-            if (listado.Any(i => i.Equals(""))) {
-                throw new Exception("Debe incluir todos los parametros");
-            }
-            else
-            {
-                var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
-                List<int> art = new List<int>();
-                art.Union(lista);
-                GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, art , ciudad, area, region);
-                grupos.Add(nuevo);
-            }
+            //if (listado.Any(i => i.Equals(""))) {
+            //    throw new Exception("Debe incluir todos los parametros");
+            //}
+            //else
+            //{
+                //var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
+                //List<int> art = new List<int>();
+                //art.Union(lista);
+                GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, null , ciudad, area, region);
+                Grupos.Add(nuevo);
+            //}
         }
         public GrupoInvestigacion BuscarGrupo(String codigo)
         {
-            GrupoInvestigacion nuevo = grupos.Find(i => i.Codigo.Equals(codigo));
+            GrupoInvestigacion nuevo = Grupos.Find(i => i.Codigo.Equals(codigo));
             return nuevo;
         }
         public void cargarGruposInvestigacion()
@@ -94,9 +97,9 @@ namespace PlataformaGruposInvestigacion.modelo
                 }
                 sr.Close();
             }
-            catch
+            catch(Exception E)
             {
-                throw new Exception("Error al cargar los datos");
+                throw new Exception(E.Message);
             }
         }
 
@@ -112,14 +115,14 @@ namespace PlataformaGruposInvestigacion.modelo
                     String[] todo = line.Split(':');
                     List<int> arti = new List<int>();
                     String[] articulos = todo[2].Split(' ');
-                    articulos.ToList().ForEach(i => arti.Add(Convert.ToInt32(i)));
+                    articulos.ToList().ForEach(i => arti.Add(i.Equals("")? 0: Convert.ToInt32(i)));
                     BuscarGrupo(todo[1]).ArtFrecuentados = arti;
                 }
                 sr.Close();
             }
-            catch
+            catch(Exception E)
             {
-                throw new Exception("Error al cargar los articulos");
+                throw new Exception(E.Message);
             }
 
         }
