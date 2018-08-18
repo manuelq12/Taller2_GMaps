@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace PlataformaGruposInvestigacion.modelo
 {
     public class GrupoInvestigacion
@@ -10,6 +15,7 @@ namespace PlataformaGruposInvestigacion.modelo
         private String codigo;
         private String clasificacion;
         private int numArticulos;
+        private List<int> artiFrecuentados;
         private String ciudad;
         private String areaInvestigacion;
         private String region;
@@ -17,11 +23,12 @@ namespace PlataformaGruposInvestigacion.modelo
        //-----------------------------------------------------------------------------------------------------------------
        //Constructor
        //-----------------------------------------------------------------------------------------------------------------
-        public GrupoInvestigacion(String nombre, String codigo, String clasificacion, int numArticulos, String ciudad, String areaInvestigacion, String region){
+        public GrupoInvestigacion(String nombre, String codigo, int numArticulos,String clasificacion,  String ciudad, String areaInvestigacion, String region){
             this.nombre = nombre;
             this.codigo = codigo; 
             this.clasificacion = clasificacion;
             this.numArticulos = numArticulos;
+            artiFrecuentados = new List<int>(numArticulos);
             this.ciudad = ciudad;
             this.areaInvestigacion = areaInvestigacion;
             this.region = region;
@@ -51,6 +58,17 @@ namespace PlataformaGruposInvestigacion.modelo
                 codigo = value;
             }
         }
+        public int NumArticulos
+        {
+            get
+            {
+                return numArticulos;
+            }
+            set
+            {
+                numArticulos = value;
+            }
+        }
         public String Clasificacion
         {
             get
@@ -62,15 +80,15 @@ namespace PlataformaGruposInvestigacion.modelo
                 clasificacion = value;
             }
         }
-        public int NumArticulos
+        public List<int> ArtFrecuentados
         {
             get
             {
-                return numArticulos;
+                return artiFrecuentados;
             }
             set
             {
-                numArticulos = value;
+                artiFrecuentados = value;
             }
         }
         public String Ciudad
