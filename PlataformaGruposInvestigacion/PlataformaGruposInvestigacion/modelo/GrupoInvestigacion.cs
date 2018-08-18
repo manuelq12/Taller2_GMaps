@@ -9,17 +9,19 @@ namespace PlataformaGruposInvestigacion.modelo
         private String nombre;
         private int codigo;
         private String clasificacion;
+        private int numArticulos;
         private String ciudad;
         private String areaInvestigacion;
         private String region;
 
-      //-----------------------------------------------------------------------------------------------------------------
-      //Constructor
-      //-----------------------------------------------------------------------------------------------------------------
-        public GrupoInvestigacion(String nombre, int codigo,String clasificacion, String ciudad, String areaInvestigacion, String region){
+        //-----------------------------------------------------------------------------------------------------------------
+        //Constructor
+        //-----------------------------------------------------------------------------------------------------------------
+        public GrupoInvestigacion(String nombre, int codigo, String clasificacion, int numArticulos, String ciudad, String areaInvestigacion, String region){
             this.nombre = nombre;
             this.codigo = codigo; 
             this.clasificacion = clasificacion;
+            this.numArticulos = numArticulos;
             this.ciudad = ciudad;
             this.areaInvestigacion = areaInvestigacion;
             this.region = region;
@@ -58,6 +60,17 @@ namespace PlataformaGruposInvestigacion.modelo
             set
             {
                 clasificacion = value;
+            }
+        }
+        public int NumArticulos
+        {
+            get
+            {
+                return numArticulos;
+            }
+            set
+            {
+                numArticulos = value;
             }
         }
         public String Ciudad
