@@ -14,7 +14,6 @@ namespace PlataformaGruposInvestigacion.modelo
         private String nombre;
         private String codigo;
         private String clasificacion;
-        private int numArticulos;
         private List<int> artiFrecuentados;
         private String ciudad;
         private String areaInvestigacion;
@@ -23,12 +22,11 @@ namespace PlataformaGruposInvestigacion.modelo
        //-----------------------------------------------------------------------------------------------------------------
        //Constructor
        //-----------------------------------------------------------------------------------------------------------------
-        public GrupoInvestigacion(String nombre, String codigo, int numArticulos,String clasificacion,  String ciudad, String areaInvestigacion, String region){
+        public GrupoInvestigacion(String nombre, String codigo ,String clasificacion, List<int> articulos, String ciudad, String areaInvestigacion, String region){
             this.nombre = nombre;
             this.codigo = codigo; 
             this.clasificacion = clasificacion;
-            this.numArticulos = numArticulos;
-            artiFrecuentados = new List<int>(numArticulos);
+            artiFrecuentados = articulos;
             this.ciudad = ciudad;
             this.areaInvestigacion = areaInvestigacion;
             this.region = region;
@@ -56,17 +54,6 @@ namespace PlataformaGruposInvestigacion.modelo
             set
             {
                 codigo = value;
-            }
-        }
-        public int NumArticulos
-        {
-            get
-            {
-                return numArticulos;
-            }
-            set
-            {
-                numArticulos = value;
             }
         }
         public String Clasificacion

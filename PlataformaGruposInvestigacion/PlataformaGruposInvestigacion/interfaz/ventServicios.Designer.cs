@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labNombre = new System.Windows.Forms.Label();
+            this.labCodigo = new System.Windows.Forms.Label();
+            this.labCiudad = new System.Windows.Forms.Label();
+            this.labArea = new System.Windows.Forms.Label();
+            this.labRegion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
@@ -43,6 +43,10 @@
             this.butBuscar = new System.Windows.Forms.Button();
             this.butActualizar = new System.Windows.Forms.Button();
             this.butVolver = new System.Windows.Forms.Button();
+            this.labNumArt = new System.Windows.Forms.Label();
+            this.labClasificacion = new System.Windows.Forms.Label();
+            this.txtClasificacion = new System.Windows.Forms.TextBox();
+            this.txtArticulos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,114 +54,126 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(333, 24);
+            this.label1.Location = new System.Drawing.Point(250, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 42);
+            this.label1.Size = new System.Drawing.Size(135, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Servicios";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // labNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.labNombre.AutoSize = true;
+            this.labNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labNombre.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNombre.Location = new System.Drawing.Point(121, 68);
+            this.labNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labNombre.Name = "labNombre";
+            this.labNombre.Size = new System.Drawing.Size(101, 27);
+            this.labNombre.TabIndex = 1;
+            this.labNombre.Text = "Nombre";
             // 
-            // label3
+            // labCodigo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 33);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Código";
+            this.labCodigo.AutoSize = true;
+            this.labCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.labCodigo.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCodigo.Location = new System.Drawing.Point(121, 111);
+            this.labCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labCodigo.Name = "labCodigo";
+            this.labCodigo.Size = new System.Drawing.Size(94, 27);
+            this.labCodigo.TabIndex = 2;
+            this.labCodigo.Text = "Código";
             // 
-            // label4
+            // labCiudad
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(178, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 33);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ciudad";
+            this.labCiudad.AutoSize = true;
+            this.labCiudad.BackColor = System.Drawing.Color.Transparent;
+            this.labCiudad.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCiudad.Location = new System.Drawing.Point(121, 236);
+            this.labCiudad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labCiudad.Name = "labCiudad";
+            this.labCiudad.Size = new System.Drawing.Size(92, 27);
+            this.labCiudad.TabIndex = 3;
+            this.labCiudad.Text = "Ciudad";
             // 
-            // label5
+            // labArea
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(178, 316);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 33);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Area";
+            this.labArea.AutoSize = true;
+            this.labArea.BackColor = System.Drawing.Color.Transparent;
+            this.labArea.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labArea.Location = new System.Drawing.Point(125, 276);
+            this.labArea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labArea.Name = "labArea";
+            this.labArea.Size = new System.Drawing.Size(64, 27);
+            this.labArea.TabIndex = 4;
+            this.labArea.Text = "Área";
             // 
-            // label6
+            // labRegion
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(178, 371);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 33);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Región";
+            this.labRegion.AutoSize = true;
+            this.labRegion.BackColor = System.Drawing.Color.Transparent;
+            this.labRegion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labRegion.Location = new System.Drawing.Point(121, 316);
+            this.labRegion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labRegion.Name = "labRegion";
+            this.labRegion.Size = new System.Drawing.Size(88, 27);
+            this.labRegion.TabIndex = 5;
+            this.labRegion.Text = "Región";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(411, 133);
+            this.txtNombre.Location = new System.Drawing.Point(308, 59);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(218, 43);
+            this.txtNombre.Size = new System.Drawing.Size(164, 36);
             this.txtNombre.TabIndex = 6;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(411, 188);
+            this.txtCodigo.Location = new System.Drawing.Point(308, 104);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(218, 43);
+            this.txtCodigo.Size = new System.Drawing.Size(164, 36);
             this.txtCodigo.TabIndex = 7;
             // 
             // txtCiudad
             // 
             this.txtCiudad.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(411, 252);
+            this.txtCiudad.Location = new System.Drawing.Point(308, 233);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(218, 43);
+            this.txtCiudad.Size = new System.Drawing.Size(164, 36);
             this.txtCiudad.TabIndex = 8;
             // 
             // txtArea
             // 
             this.txtArea.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArea.Location = new System.Drawing.Point(411, 313);
+            this.txtArea.Location = new System.Drawing.Point(308, 273);
+            this.txtArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(218, 43);
+            this.txtArea.Size = new System.Drawing.Size(164, 36);
             this.txtArea.TabIndex = 9;
             // 
             // txtRegion
             // 
             this.txtRegion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegion.Location = new System.Drawing.Point(411, 368);
+            this.txtRegion.Location = new System.Drawing.Point(308, 313);
+            this.txtRegion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRegion.Name = "txtRegion";
-            this.txtRegion.Size = new System.Drawing.Size(218, 43);
+            this.txtRegion.Size = new System.Drawing.Size(164, 36);
             this.txtRegion.TabIndex = 10;
             // 
             // butRegistrar
             // 
             this.butRegistrar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butRegistrar.Location = new System.Drawing.Point(96, 460);
+            this.butRegistrar.Location = new System.Drawing.Point(72, 374);
+            this.butRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butRegistrar.Name = "butRegistrar";
-            this.butRegistrar.Size = new System.Drawing.Size(161, 49);
+            this.butRegistrar.Size = new System.Drawing.Size(121, 40);
             this.butRegistrar.TabIndex = 11;
             this.butRegistrar.Text = "Registrar";
             this.butRegistrar.UseVisualStyleBackColor = true;
@@ -166,9 +182,10 @@
             // butBuscar
             // 
             this.butBuscar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butBuscar.Location = new System.Drawing.Point(340, 460);
+            this.butBuscar.Location = new System.Drawing.Point(255, 374);
+            this.butBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butBuscar.Name = "butBuscar";
-            this.butBuscar.Size = new System.Drawing.Size(161, 49);
+            this.butBuscar.Size = new System.Drawing.Size(121, 40);
             this.butBuscar.TabIndex = 12;
             this.butBuscar.Text = "Buscar";
             this.butBuscar.UseVisualStyleBackColor = true;
@@ -177,9 +194,10 @@
             // butActualizar
             // 
             this.butActualizar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butActualizar.Location = new System.Drawing.Point(572, 460);
+            this.butActualizar.Location = new System.Drawing.Point(429, 374);
+            this.butActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butActualizar.Name = "butActualizar";
-            this.butActualizar.Size = new System.Drawing.Size(185, 49);
+            this.butActualizar.Size = new System.Drawing.Size(139, 40);
             this.butActualizar.TabIndex = 13;
             this.butActualizar.Text = "Actualizar";
             this.butActualizar.UseVisualStyleBackColor = true;
@@ -190,21 +208,68 @@
             this.butVolver.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.volver;
             this.butVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butVolver.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butVolver.Location = new System.Drawing.Point(12, 510);
+            this.butVolver.Location = new System.Drawing.Point(9, 414);
+            this.butVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butVolver.Name = "butVolver";
-            this.butVolver.Size = new System.Drawing.Size(49, 49);
+            this.butVolver.Size = new System.Drawing.Size(37, 40);
             this.butVolver.TabIndex = 14;
             this.butVolver.UseVisualStyleBackColor = false;
             this.butVolver.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labNumArt
+            // 
+            this.labNumArt.AutoSize = true;
+            this.labNumArt.BackColor = System.Drawing.Color.Transparent;
+            this.labNumArt.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNumArt.Location = new System.Drawing.Point(121, 198);
+            this.labNumArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labNumArt.Name = "labNumArt";
+            this.labNumArt.Size = new System.Drawing.Size(108, 27);
+            this.labNumArt.TabIndex = 15;
+            this.labNumArt.Text = "Artículos";
+            // 
+            // labClasificacion
+            // 
+            this.labClasificacion.AutoSize = true;
+            this.labClasificacion.BackColor = System.Drawing.Color.Transparent;
+            this.labClasificacion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labClasificacion.Location = new System.Drawing.Point(121, 153);
+            this.labClasificacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labClasificacion.Name = "labClasificacion";
+            this.labClasificacion.Size = new System.Drawing.Size(151, 27);
+            this.labClasificacion.TabIndex = 16;
+            this.labClasificacion.Text = "Clasificación";
+            // 
+            // txtClasificacion
+            // 
+            this.txtClasificacion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClasificacion.Location = new System.Drawing.Point(308, 144);
+            this.txtClasificacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClasificacion.Name = "txtClasificacion";
+            this.txtClasificacion.Size = new System.Drawing.Size(164, 36);
+            this.txtClasificacion.TabIndex = 17;
+            // 
+            // txtArticulos
+            // 
+            this.txtArticulos.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArticulos.Location = new System.Drawing.Point(308, 189);
+            this.txtArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtArticulos.Name = "txtArticulos";
+            this.txtArticulos.Size = new System.Drawing.Size(164, 36);
+            this.txtArticulos.TabIndex = 18;
+            // 
             // ventServicios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(825, 571);
+            this.ClientSize = new System.Drawing.Size(619, 464);
+            this.Controls.Add(this.txtArticulos);
+            this.Controls.Add(this.txtClasificacion);
+            this.Controls.Add(this.labClasificacion);
+            this.Controls.Add(this.labNumArt);
             this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butActualizar);
             this.Controls.Add(this.butBuscar);
@@ -214,12 +279,13 @@
             this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labRegion);
+            this.Controls.Add(this.labArea);
+            this.Controls.Add(this.labCiudad);
+            this.Controls.Add(this.labCodigo);
+            this.Controls.Add(this.labNombre);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ventServicios";
             this.Text = "ventServicios";
             this.Load += new System.EventHandler(this.ventServicios_Load);
@@ -231,11 +297,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labNombre;
+        private System.Windows.Forms.Label labCodigo;
+        private System.Windows.Forms.Label labCiudad;
+        private System.Windows.Forms.Label labArea;
+        private System.Windows.Forms.Label labRegion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtCiudad;
@@ -245,5 +311,9 @@
         private System.Windows.Forms.Button butBuscar;
         private System.Windows.Forms.Button butActualizar;
         private System.Windows.Forms.Button butVolver;
+        private System.Windows.Forms.Label labNumArt;
+        private System.Windows.Forms.Label labClasificacion;
+        private System.Windows.Forms.TextBox txtClasificacion;
+        private System.Windows.Forms.TextBox txtArticulos;
     }
 }
