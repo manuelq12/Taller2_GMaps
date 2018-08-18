@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GMap.NET.WindowsForms">
-      <HintPath>..\..\..\pruebaCmaps\packages\GMap.NET.WindowsForms.1.7.5\lib\net20\GMap.NET.WindowsForms.dll</HintPath>
+      <HintPath>C:\Users\Usuario\Documents\Icesi\Profesionalizantes\Proyecto Integrador I\GMaps\Release-NETv4.0\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -105,9 +105,6 @@
   <ItemGroup>
     <None Include="Resources\volver.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modelo\" />
-    <Folder Include="interfaz\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
