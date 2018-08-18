@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,23 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="interfazPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="interfazPrincipal.Designer.cs">
-      <DependentUpon>interfazPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ventServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ventServicios.Designer.cs">
-      <DependentUpon>ventServicios.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="interfazPrincipal.resx">
-      <DependentUpon>interfazPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,9 +59,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ventServicios.resx">
-      <DependentUpon>ventServicios.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +68,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="interfaz\Program.cs" />
+    <Compile Include="interfaz\interfazPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\interfazPrincipal.Designer.cs">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\interfazPrincipal.resx">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="interfaz\ventServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\ventServicios.Designer.cs">
+      <DependentUpon>ventServicios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\ventServicios.resx">
+      <DependentUpon>ventServicios.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -102,6 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modelo\" />
+    <Folder Include="interfaz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
