@@ -42,6 +42,7 @@
             this.butRegistrar = new System.Windows.Forms.Button();
             this.butBuscar = new System.Windows.Forms.Button();
             this.butActualizar = new System.Windows.Forms.Button();
+            this.butVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -181,6 +182,19 @@
             this.butActualizar.Text = "Actualizar";
             this.butActualizar.UseVisualStyleBackColor = true;
             // 
+            // butVolver
+            // 
+            this.butVolver.BackColor = System.Drawing.Color.Transparent;
+            this.butVolver.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.volver;
+            this.butVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butVolver.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butVolver.Location = new System.Drawing.Point(12, 510);
+            this.butVolver.Name = "butVolver";
+            this.butVolver.Size = new System.Drawing.Size(49, 49);
+            this.butVolver.TabIndex = 14;
+            this.butVolver.UseVisualStyleBackColor = false;
+            this.butVolver.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ventServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,6 +203,7 @@
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(825, 571);
+            this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butActualizar);
             this.Controls.Add(this.butBuscar);
             this.Controls.Add(this.butRegistrar);
@@ -227,5 +242,6 @@
         private System.Windows.Forms.Button butRegistrar;
         private System.Windows.Forms.Button butBuscar;
         private System.Windows.Forms.Button butActualizar;
+        private System.Windows.Forms.Button butVolver;
     }
 }

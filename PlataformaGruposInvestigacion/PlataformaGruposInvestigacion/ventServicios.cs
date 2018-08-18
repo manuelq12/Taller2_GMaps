@@ -26,5 +26,17 @@ namespace PlataformaGruposInvestigacion
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form ventInicio = new interfazPrincipal();
+            
+            ventInicio.Visible = true;
+            ventInicio.Show();
+            this.Visible = false;
+
+
+
+        }
     }
 }

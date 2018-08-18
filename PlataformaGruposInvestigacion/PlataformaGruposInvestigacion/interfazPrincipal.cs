@@ -16,5 +16,20 @@ namespace PlataformaGruposInvestigacion
         {
             InitializeComponent();
         }
+
+        private void interfazPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butServicios_Click(object sender, EventArgs e)
+        {
+            //Mandar a la ventana Servicios
+            Form ventServicios = new ventServicios();
+            ventServicios.Visible = true;
+            ventServicios.Show();
+            this.Visible = false;
+
+        }
     }
 }
