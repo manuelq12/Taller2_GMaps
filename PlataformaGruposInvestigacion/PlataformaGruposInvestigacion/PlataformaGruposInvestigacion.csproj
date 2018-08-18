@@ -103,11 +103,10 @@
     <None Include="Resources\google2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Grupos_de_Investigaci_n_Colombia_2017.csv" />
+    <None Include="Resources\TransaccionesGruposArticulos.csv" />
     <None Include="Resources\volver.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modelo\" />
-    <Folder Include="interfaz\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
