@@ -24,18 +24,14 @@ namespace PlataformaGruposInvestigacion.modelo
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region)
         {
            String [] listado = { nombre, codigo, clasificacion, ciudad, area, region };
-            //if (listado.Any(i => i.Equals(""))) {
-            //    throw new Exception("Debe incluir todos los parametros");
-            //}
-            //else
-            //{
+           
             var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
             List<int> art = new List<int>();
             List<int> listaNueva = art.Union(lista).ToList<int>();
             GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, listaNueva , ciudad, area, region);
                 Grupos.Add(nuevo);
             
-            //}
+            
         }
         public GrupoInvestigacion BuscarGrupo(String codigo)
         {
