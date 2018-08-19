@@ -59,9 +59,11 @@ namespace PlataformaGruposInvestigacion
                 txtArea.Text = ventana.Buscar(codigo).AreaInvestigacion;
                 txtRegion.Text = ventana.Buscar(codigo).Region;
                 txtClasificacion.Text = ventana.Buscar(codigo).Clasificacion;
-                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString;
+                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString();
                 txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
-            }
+                }else{
+                    MessageBox.Show("No existe el grupo que desea buscar");
+                }
             }
 
         }
