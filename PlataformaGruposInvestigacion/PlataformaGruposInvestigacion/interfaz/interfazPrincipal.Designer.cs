@@ -52,7 +52,7 @@
             // 
             this.butServicios.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butServicios.Location = new System.Drawing.Point(631, 358);
-            this.butServicios.Margin = new System.Windows.Forms.Padding(2);
+            this.butServicios.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butServicios.Name = "butServicios";
             this.butServicios.Size = new System.Drawing.Size(152, 38);
             this.butServicios.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             this.butCantFrecuenciaArch.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCantFrecuenciaArch.Location = new System.Drawing.Point(631, 436);
-            this.butCantFrecuenciaArch.Margin = new System.Windows.Forms.Padding(2);
+            this.butCantFrecuenciaArch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butCantFrecuenciaArch.Name = "butCantFrecuenciaArch";
             this.butCantFrecuenciaArch.Size = new System.Drawing.Size(152, 75);
             this.butCantFrecuenciaArch.TabIndex = 3;
@@ -76,8 +76,8 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.google2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(640, 158);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(640, 159);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 138);
             this.pictureBox1.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.butReportes.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butReportes.Location = new System.Drawing.Point(631, 531);
-            this.butReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.butReportes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butReportes.Name = "butReportes";
             this.butReportes.Size = new System.Drawing.Size(152, 45);
             this.butReportes.TabIndex = 6;
@@ -101,13 +101,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(834, 609);
+            this.ClientSize = new System.Drawing.Size(793, 593);
             this.Controls.Add(this.butReportes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.butCantFrecuenciaArch);
             this.Controls.Add(this.butServicios);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "interfazPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.interfazPrincipal_Load);
