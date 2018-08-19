@@ -38,8 +38,8 @@ namespace PlataformaGruposInvestigacion.modelo
         }
         public GrupoInvestigacion BuscarGrupo(String codigo)
         {
-
-            GrupoInvestigacion nuevo = Grupos.Find(i => i.Codigo.Equals(codigo));
+            GrupoInvestigacion nuevo = null;
+            nuevo = Grupos.Find(i => i.Codigo.Equals(codigo));
             return nuevo;
         }
         public void cargarGruposInvestigacion()

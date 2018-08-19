@@ -19,6 +19,8 @@ namespace PlataformaGruposInvestigacion
         {
             modelo = new Plataforma();
             InitializeComponent();
+            modelo.cargarGruposInvestigacion();
+            modelo.cargarArticulos();
         }
 
         private void interfazPrincipal_Load(object sender, EventArgs e)
