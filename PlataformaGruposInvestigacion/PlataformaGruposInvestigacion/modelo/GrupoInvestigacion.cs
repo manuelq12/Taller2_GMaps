@@ -11,6 +11,7 @@ namespace PlataformaGruposInvestigacion.modelo
      //-----------------------------------------------------------------------------------------------------------------
      //Atributos
      //-----------------------------------------------------------------------------------------------------------------
+     // Nada
         private String nombre;
         private String codigo;
         private String clasificacion;
