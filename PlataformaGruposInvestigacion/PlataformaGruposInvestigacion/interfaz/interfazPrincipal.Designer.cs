@@ -33,6 +33,7 @@
             this.butCantFrecuenciaArch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.butReportes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +107,17 @@
             this.gMapControl1.Zoom = 2D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
             // 
+            // butReportes
+            // 
+            this.butReportes.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butReportes.Location = new System.Drawing.Point(841, 654);
+            this.butReportes.Name = "butReportes";
+            this.butReportes.Size = new System.Drawing.Size(203, 55);
+            this.butReportes.TabIndex = 6;
+            this.butReportes.Text = "Reportes";
+            this.butReportes.UseVisualStyleBackColor = true;
+            this.butReportes.Click += new System.EventHandler(this.butReportes_Click);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -113,6 +125,7 @@
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 756);
+            this.Controls.Add(this.butReportes);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.butCantFrecuenciaArch);
@@ -134,6 +147,7 @@
         private System.Windows.Forms.Button butCantFrecuenciaArch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private System.Windows.Forms.Button butReportes;
     }
 }
 

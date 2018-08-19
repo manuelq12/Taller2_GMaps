@@ -58,5 +58,20 @@ namespace PlataformaGruposInvestigacion
             gMapControl1.SetPositionByKeywords("Cali,Colombia");
 
         }
+
+        private void butReportes_Click(object sender, EventArgs e)
+        {
+            /*  Form ventServicios = new ventServicios(this);
+              ventServicios.Visible = true;
+              ventServicios.Show();
+              this.Visible = false;
+              */
+
+            Form ventReportes = new ventReportes();
+            ventReportes.Visible = true;
+            ventReportes.Show();
+            this.Visible = false;
+            
+        }
     }
 }
