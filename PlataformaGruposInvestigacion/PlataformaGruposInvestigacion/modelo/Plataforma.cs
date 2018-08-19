@@ -29,10 +29,10 @@ namespace PlataformaGruposInvestigacion.modelo
             //}
             //else
             //{
-                //var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
-                //List<int> art = new List<int>();
-                //art.Union(lista);
-                GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, null , ciudad, area, region);
+            var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
+            List<int> art = new List<int>();
+            art.Union(lista);
+            GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, art , ciudad, area, region);
                 Grupos.Add(nuevo);
             //}
         }
@@ -94,7 +94,7 @@ namespace PlataformaGruposInvestigacion.modelo
                         if(contador + 1>= todo.Length) area = "No especificada";
                         else area = todo[contador+1];
                     }
-                    AgregarGrupo(nombre, codigo, clasi, "No especificados", ciudad, area, region);
+                    AgregarGrupo(nombre, codigo, clasi, "-1 -1", ciudad, area, region);
                 }
                 sr.Close();
             }
@@ -116,7 +116,7 @@ namespace PlataformaGruposInvestigacion.modelo
                     String[] todo = line.Split(':');
                     List<int> arti = new List<int>();
                     String[] articulos = todo[2].Split(' ');
-                    articulos.ToList().ForEach(i => arti.Add(i.Equals("")? 0: Convert.ToInt32(i)));
+                    articulos.ToList().ForEach(i => arti.Add(i.Equals("")? -1: Convert.ToInt32(i)));
                     BuscarGrupo(todo[1]).ArtFrecuentados = arti;
                 }
                 sr.Close();
