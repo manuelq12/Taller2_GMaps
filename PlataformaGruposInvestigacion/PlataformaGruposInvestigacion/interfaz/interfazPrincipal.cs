@@ -52,13 +52,13 @@ namespace PlataformaGruposInvestigacion
         }
 
 
-        private void gMapControl1_Load(object sender, EventArgs e)
-        {
-            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
-            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
-            gMapControl1.SetPositionByKeywords("Cali,Colombia");
+        //private void gMapControl1_Load(object sender, EventArgs e)
+        //{
+        //    gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+        //    GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+        //    gMapControl1.SetPositionByKeywords("Cali,Colombia");
 
-        }
+        //}
 
         private void butReportes_Click(object sender, EventArgs e)
         {
