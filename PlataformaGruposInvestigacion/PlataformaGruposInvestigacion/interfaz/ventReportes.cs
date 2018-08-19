@@ -12,8 +12,11 @@ namespace PlataformaGruposInvestigacion
 {
     public partial class ventReportes : Form
     {
-        public ventReportes()
+        private interfazPrincipal principal;
+
+        public ventReportes(interfazPrincipal p)
         {
+            principal = p;
             InitializeComponent();
         }
 

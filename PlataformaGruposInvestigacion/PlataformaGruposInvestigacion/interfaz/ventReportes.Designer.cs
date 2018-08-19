@@ -36,9 +36,7 @@
             this.btnRegiones = new System.Windows.Forms.Button();
             this.btnAreas = new System.Windows.Forms.Button();
             this.btnClasificacion = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grafico1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // grafico1
@@ -47,9 +45,9 @@
             this.grafico1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.grafico1.Legends.Add(legend1);
-            this.grafico1.Location = new System.Drawing.Point(1346, 806);
+            this.grafico1.Location = new System.Drawing.Point(56, 49);
             this.grafico1.Name = "grafico1";
-            this.grafico1.Size = new System.Drawing.Size(72, 58);
+            this.grafico1.Size = new System.Drawing.Size(1105, 751);
             this.grafico1.TabIndex = 1;
             this.grafico1.Text = "chart1";
             // 
@@ -103,21 +101,11 @@
             this.btnClasificacion.UseVisualStyleBackColor = true;
             this.btnClasificacion.Click += new System.EventHandler(this.btnClasificacion_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 751);
-            this.dataGridView1.TabIndex = 7;
-            // 
             // ventReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 872);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnClasificacion);
             this.Controls.Add(this.btnAreas);
             this.Controls.Add(this.btnRegiones);
@@ -129,7 +117,6 @@
             this.Text = "ventReportes";
             this.Load += new System.EventHandler(this.ventReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grafico1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,6 +129,5 @@
         private System.Windows.Forms.Button btnRegiones;
         private System.Windows.Forms.Button btnAreas;
         private System.Windows.Forms.Button btnClasificacion;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

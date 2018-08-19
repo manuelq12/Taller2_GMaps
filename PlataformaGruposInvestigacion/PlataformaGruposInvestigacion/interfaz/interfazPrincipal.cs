@@ -68,11 +68,15 @@ namespace PlataformaGruposInvestigacion
               this.Visible = false;
               */
 
-            Form ventReportes = new ventReportes();
+            Form ventReportes = new ventReportes(this);
             ventReportes.Visible = true;
             ventReportes.Show();
             this.Visible = false;
             
+        }
+        public Plataforma darMundo()
+        {
+            return modelo;
         }
     }
 }
