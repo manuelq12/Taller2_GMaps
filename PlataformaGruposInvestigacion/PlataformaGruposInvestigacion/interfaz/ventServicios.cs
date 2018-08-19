@@ -63,6 +63,7 @@ namespace PlataformaGruposInvestigacion
                 txtRegion.Text = ventana.Buscar(codigo).Region;
                 txtClasificacion.Text = ventana.Buscar(codigo).Clasificacion;
                 txtArticulos.Text = articulos;
+                    Console.WriteLine(articulos);
 
                     txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
                 }else{

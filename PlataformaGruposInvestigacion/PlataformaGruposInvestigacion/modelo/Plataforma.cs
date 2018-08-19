@@ -31,9 +31,10 @@ namespace PlataformaGruposInvestigacion.modelo
             //{
             var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
             List<int> art = new List<int>();
-            art.Union(lista);
-            GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, art , ciudad, area, region);
+            List<int> listaNueva = art.Union(lista).ToList<int>();
+            GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, listaNueva , ciudad, area, region);
                 Grupos.Add(nuevo);
+            
             //}
         }
         public GrupoInvestigacion BuscarGrupo(String codigo)
