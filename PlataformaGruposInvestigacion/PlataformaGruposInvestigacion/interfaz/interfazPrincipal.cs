@@ -47,6 +47,7 @@ namespace PlataformaGruposInvestigacion
         }
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region){
             modelo.AgregarGrupo( nombre,  codigo,  clasificacion,  articulos,  ciudad,  area,  region);
+
             MessageBox.Show("Se Agrego el Grupo Correctamente.");
         }
 

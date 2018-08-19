@@ -53,14 +53,18 @@ namespace PlataformaGruposInvestigacion
             }
             else
             {
+                List<int> a=ventana.Buscar(codigo).ArtFrecuentados;
+                String articulos = "";
+                a.Where(i=> i!=-1).ToList().ForEach(i=> articulos+= " "+i);
                 if (ventana.Buscar(codigo) != null) { 
                 txtNombre.Text = ventana.Buscar(codigo).Nombre;
                 txtCodigo.Text = ventana.Buscar(codigo).Codigo;
                 txtArea.Text = ventana.Buscar(codigo).AreaInvestigacion;
                 txtRegion.Text = ventana.Buscar(codigo).Region;
                 txtClasificacion.Text = ventana.Buscar(codigo).Clasificacion;
-                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString();
-                txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
+                txtArticulos.Text = articulos;
+
+                    txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
                 }else{
                     MessageBox.Show("No existe el grupo que desea buscar");
                 }
