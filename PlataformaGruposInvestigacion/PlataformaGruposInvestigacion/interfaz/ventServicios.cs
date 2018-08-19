@@ -57,7 +57,7 @@ namespace PlataformaGruposInvestigacion
                 txtArea.Text = ventana.Buscar(codigo).AreaInvestigacion;
                 txtRegion.Text = ventana.Buscar(codigo).Region;
                 txtClasificacion.Text= ventana.Buscar(codigo).Clasificacion;
-                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString;
+                txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString();
                 txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
 
             }
@@ -84,5 +84,9 @@ namespace PlataformaGruposInvestigacion
             limpiarBox.borrarCampos(this);
         }
 
+        private void butActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
