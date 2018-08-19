@@ -262,5 +262,14 @@ namespace PlataformaGruposInvestigacion
 
             }
         }
+
+        private void butVolver_Click(object sender, EventArgs e)
+        {
+            Form ventInicio = new interfazPrincipal();
+
+            ventInicio.Visible = true;
+            ventInicio.Show();
+            this.Visible = false;
+        }
     }
 }
