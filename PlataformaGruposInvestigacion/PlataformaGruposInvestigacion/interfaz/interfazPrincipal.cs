@@ -41,13 +41,8 @@ namespace PlataformaGruposInvestigacion
         public GrupoInvestigacion Buscar(String codigo)
         {
 
-            GrupoInvestigacion grupo = modelo.BuscarGrupo(codigo);
-            if(grupo==null){
-                MessageBox.Show("El grupo que desea buscar no existe");
-            }else{
-                return grupo;
-            }
 
+            return modelo.BuscarGrupo(codigo);
 
         }
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region){

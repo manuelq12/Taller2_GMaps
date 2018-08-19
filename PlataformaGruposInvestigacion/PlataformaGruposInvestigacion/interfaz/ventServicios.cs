@@ -47,19 +47,21 @@ namespace PlataformaGruposInvestigacion
 
             String codigo = txtCodigo.Text;
 
-            if (codigo=="")
+            if (codigo == "")
             {
                 MessageBox.Show("Ingrese el codigo grupo de investigación");
             }
-            else{
+            else
+            {
+                if (ventana.Buscar(codigo) != null) { 
                 txtNombre.Text = ventana.Buscar(codigo).Nombre;
                 txtCodigo.Text = ventana.Buscar(codigo).Codigo;
                 txtArea.Text = ventana.Buscar(codigo).AreaInvestigacion;
                 txtRegion.Text = ventana.Buscar(codigo).Region;
-                txtClasificacion.Text= ventana.Buscar(codigo).Clasificacion;
+                txtClasificacion.Text = ventana.Buscar(codigo).Clasificacion;
                 txtArticulos.Text = ventana.Buscar(codigo).ArtFrecuentados.ToString;
                 txtCiudad.Text = ventana.Buscar(codigo).Ciudad;
-
+            }
             }
 
         }
