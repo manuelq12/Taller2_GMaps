@@ -32,6 +32,7 @@
             this.butServicios = new System.Windows.Forms.Button();
             this.butCantFrecuenciaArch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +79,31 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // gMapControl1
+            // 
+            this.gMapControl1.Bearing = 0F;
+            this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.LevelsKeepInMemmory = 5;
+            this.gMapControl1.Location = new System.Drawing.Point(12, 130);
+            this.gMapControl1.MarkersEnabled = true;
+            this.gMapControl1.MaxZoom = 8;
+            this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomEnabled = true;
+            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl1.Name = "gMapControl1";
+            this.gMapControl1.NegativeMode = false;
+            this.gMapControl1.PolygonsEnabled = true;
+            this.gMapControl1.RetryLoadTile = 0;
+            this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControl1.ShowTileGridLines = false;
+            this.gMapControl1.Size = new System.Drawing.Size(788, 610);
+            this.gMapControl1.TabIndex = 5;
+            this.gMapControl1.Zoom = 2D;
+            this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -85,6 +111,7 @@
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 756);
+            this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.butCantFrecuenciaArch);
             this.Controls.Add(this.butServicios);
@@ -104,6 +131,7 @@
         private System.Windows.Forms.Button butServicios;
         private System.Windows.Forms.Button butCantFrecuenciaArch;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private GMap.NET.WindowsForms.GMapControl gMapControl1;
     }
 }
 

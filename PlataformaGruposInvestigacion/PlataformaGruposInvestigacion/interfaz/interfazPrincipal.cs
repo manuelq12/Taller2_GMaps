@@ -49,5 +49,14 @@ namespace PlataformaGruposInvestigacion
             modelo.AgregarGrupo( nombre,  codigo,  clasificacion,  articulos,  ciudad,  area,  region);
             MessageBox.Show("Se Agrego el Grupo Correctamente.");
         }
+
+
+        private void gMapControl1_Load(object sender, EventArgs e)
+        {
+            gMapControl1.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+            gMapControl1.SetPositionByKeywords("Cali,Colombia");
+
+        }
     }
 }
