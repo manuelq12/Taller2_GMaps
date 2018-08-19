@@ -89,6 +89,7 @@
     </EmbeddedResource>
     <Compile Include="modelo\GrupoInvestigacion.cs" />
     <Compile Include="modelo\Plataforma.cs" />
+    <Compile Include="interfaz\limpiar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -103,8 +104,6 @@
     <None Include="Resources\google2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Grupos_de_Investigaci_n_Colombia_2017.csv" />
-    <None Include="Resources\TransaccionesGruposArticulos.csv" />
     <None Include="Resources\volver.png" />
   </ItemGroup>
   <ItemGroup />

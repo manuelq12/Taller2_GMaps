@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlataformaGruposInvestigacion.interfaz;
 using System.Windows.Forms;
 
 namespace PlataformaGruposInvestigacion
@@ -79,7 +80,8 @@ namespace PlataformaGruposInvestigacion
             }else{
                 ventana.AgregarGrupo(nombre, codigo, clasificacion, articulos, ciudad, areaInvestigacion, region);
             }
-
+            limpiar limpiarBox = new limpiar();
+            limpiarBox.borrarCampos(this);
         }
 
     }
