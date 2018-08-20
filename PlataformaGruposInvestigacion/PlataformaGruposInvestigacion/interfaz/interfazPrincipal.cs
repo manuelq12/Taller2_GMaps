@@ -163,8 +163,9 @@ namespace PlataformaGruposInvestigacion
                         GMapOverlay markersOverlay = new GMapOverlay("Marcador");
                         GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
                           GMarkerGoogleType.yellow);
+                        
                         markersOverlay.Markers.Add(marker);
-
+                        
                         marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
                         marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
                         gMapControl1.Overlays.Add(markersOverlay);
