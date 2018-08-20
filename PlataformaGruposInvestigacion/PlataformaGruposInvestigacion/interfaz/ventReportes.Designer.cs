@@ -1,4 +1,6 @@
-﻿namespace PlataformaGruposInvestigacion
+﻿using System;
+
+namespace PlataformaGruposInvestigacion
 {
     partial class ventReportes
     {
@@ -142,6 +144,10 @@
             this.ResumeLayout(false);
 
         }
+
+       
+
+
 
         #endregion
 
