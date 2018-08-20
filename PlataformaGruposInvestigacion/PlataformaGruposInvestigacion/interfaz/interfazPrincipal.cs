@@ -6,8 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GMap.NET.WindowsForms;
 using System.Windows.Forms;
 using PlataformaGruposInvestigacion.modelo;
+using GMap.NET.WindowsForms.Markers;
+using GMap.NET;
+using System.Collections;
+using GoogleMaps.LocationServices;
 
 namespace PlataformaGruposInvestigacion
 {
@@ -25,8 +30,8 @@ namespace PlataformaGruposInvestigacion
 
         private void interfazPrincipal_Load(object sender, EventArgs e)
         {
-            
-                 
+
+
         }
 
         private void butServicios_Click(object sender, EventArgs e)
@@ -48,10 +53,11 @@ namespace PlataformaGruposInvestigacion
 
 
             return modelo.BuscarGrupo(codigo);
- 
+
         }
-        public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region){
-            modelo.AgregarGrupo( nombre,  codigo,  clasificacion,  articulos,  ciudad,  area,  region);
+        public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region)
+        {
+            modelo.AgregarGrupo(nombre, codigo, clasificacion, articulos, ciudad, area, region);
 
             MessageBox.Show("Se Agrego el Grupo Correctamente.");
         }
@@ -77,7 +83,7 @@ namespace PlataformaGruposInvestigacion
             ventReportes.Visible = true;
             ventReportes.Show();
             this.Visible = false;
-            
+
         }
         public Plataforma darMundo()
         {
@@ -87,6 +93,47 @@ namespace PlataformaGruposInvestigacion
         private void butCantFrecuenciaArch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gMapControl1_Load(object sender, EventArgs e)
+        {
+            // Initialize map:
+            gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+            gMapControl1.SetPositionByKeywords("Cali, Colombia");
+
+            for (int i = 0; i < modelo.Grupos.Capacity && i <= 2; i++)
+            {
+                var region = modelo.Grupos[i].Region;
+                var ciudad = modelo.Grupos[i].Ciudad;
+                Console.WriteLine(region + " " + ciudad);
+                if (region != null && ciudad != null)
+                {
+                    var locationService = new GoogleLocationService();
+                    try
+                    {
+                        var point = locationService.GetLatLongFromAddress("La Hacienda" + ", " + "Cali");
+                        if (point != null)
+                        {
+
+                            var latitude = point.Latitude;
+                            var longitude = point.Longitude;
+                            GMapOverlay markersOverlay = new GMapOverlay("Marcador");
+                            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
+                              GMarkerGoogleType.green);
+                            markersOverlay.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(markersOverlay);
+
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                   
+                }
+            }
         }
     }
 }
