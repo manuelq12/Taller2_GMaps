@@ -102,7 +102,7 @@ namespace PlataformaGruposInvestigacion
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Cali, Colombia");
 
-            for (int i = 0; i < modelo.Grupos.Capacity && i <= 2; i++)
+            for (int i = 0; i < modelo.Grupos.Capacity && i <= 10; i++)
             {
                 var region = modelo.Grupos[i].Region;
                 var ciudad = modelo.Grupos[i].Ciudad;
@@ -112,7 +112,7 @@ namespace PlataformaGruposInvestigacion
                     var locationService = new GoogleLocationService();
                     try
                     {
-                        var point = locationService.GetLatLongFromAddress("La Hacienda" + ", " + "Cali");
+                        var point = locationService.GetLatLongFromAddress(region + ", " + ciudad);
                         if (point != null)
                         {
 
