@@ -94,7 +94,7 @@ namespace PlataformaGruposInvestigacion
         {
 
         }
-
+        //
         public void gMapControl1_Load(object sender, EventArgs e)
         {
             // Initialize map:
