@@ -93,6 +93,7 @@ namespace PlataformaGruposInvestigacion
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
+            //Reporte Artículos
             MessageBox.Show("Espere 5 seg mientras la nueva informacion es analizada");
             grafico1.Series.Clear();
             modelo.Plataforma mundo = principal.darMundo();
