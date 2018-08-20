@@ -54,9 +54,9 @@ namespace PlataformaGruposInvestigacion
             }
             else
             {
-                List<int> a = ; ;
+                List<int> a =ventana.Buscar(codigo).ArtFrecuentados;
                 String articulos = "";
-                a.Where(i=> i!=-1).ToList().ForEach(i=> articulos+= i+" ");
+                a.Where(i=> i!=-1).ToList().ForEach(i=> articulos+= i + " ");
                 if (ventana.Buscar(codigo) != null) { 
                 txtNombre.Text = ventana.Buscar(codigo).Nombre;
                 txtCodigo.Text = ventana.Buscar(codigo).Codigo;
@@ -94,7 +94,7 @@ namespace PlataformaGruposInvestigacion
 
         private void butActualizar_Click(object sender, EventArgs e)
         {
-            limpiar limpiarCampos = new limpiar();
+          
             String nombre = txtNombre.Text;
             String codigo = txtCodigo.Text;
             String ciudad = txtCiudad.Text;
@@ -121,7 +121,8 @@ namespace PlataformaGruposInvestigacion
                 nuevo.AreaInvestigacion = areaInvestigacion;
                 nuevo.Region = region;
                 ventana.ActualizarGrupo(nuevo);
-               
+                limpiar limpiarBox = new limpiar();
+                limpiarBox.borrarCampos(this);
             }
         }
     }

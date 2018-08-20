@@ -27,7 +27,7 @@ namespace PlataformaGruposInvestigacion.modelo
            
             var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
             List<int> art = new List<int>();
-            List<int> listaNueva = art.Union(lista).ToList<int>();
+            List<int> listaNueva = art.Concat(lista).ToList<int>();
             GrupoInvestigacion nuevo = new GrupoInvestigacion(nombre, codigo, clasificacion, listaNueva , ciudad, area, region);
                 Grupos.Add(nuevo);
             
