@@ -52,6 +52,7 @@ namespace PlataformaGruposInvestigacion.modelo
             try
             {
                 StreamReader sr = new StreamReader(rutaGrupos);
+                line = sr.ReadLine();
                 while ((line = sr.ReadLine()) != null)
                 {
                     String[] todo = line.Split(',');
