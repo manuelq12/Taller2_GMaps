@@ -102,7 +102,7 @@ namespace PlataformaGruposInvestigacion
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Cali, Colombia");
 
-            for (int i = 0; i < modelo.Grupos.Capacity && i <= 10; i++)
+            for (int i = 0; i < modelo.Grupos.Capacity && i <= 100; i++)
             {
            
                 var region = modelo.Grupos[i].Region;
