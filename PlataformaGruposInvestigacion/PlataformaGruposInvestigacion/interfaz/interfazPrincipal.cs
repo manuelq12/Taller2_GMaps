@@ -115,7 +115,7 @@ namespace PlataformaGruposInvestigacion
                         var point = locationService.GetLatLongFromAddress(region + ", " + ciudad);
                         if (point != null)
                         {
-
+                            
                             var latitude = point.Latitude;
                             var longitude = point.Longitude;
                             GMapOverlay markersOverlay = new GMapOverlay("Marcador");
@@ -124,7 +124,7 @@ namespace PlataformaGruposInvestigacion
                             markersOverlay.Markers.Add(marker);
 
                             marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                            marker.ToolTipText = string.Format("Nombre:\n {0} ", modelo.Grupos[i].Nombre);
+                            marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", modelo.Grupos[i].Nombre, modelo.Grupos[i].Codigo);
                             gMapControl1.Overlays.Add(markersOverlay);
 
                         }
