@@ -44,12 +44,13 @@ namespace PlataformaGruposInvestigacion
             // 
             // grafico1
             // 
+            this.grafico1.BackImageTransparentColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
             this.grafico1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.grafico1.Legends.Add(legend1);
             this.grafico1.Location = new System.Drawing.Point(21, 21);
-            this.grafico1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.grafico1.Margin = new System.Windows.Forms.Padding(1);
             this.grafico1.Name = "grafico1";
             this.grafico1.Size = new System.Drawing.Size(414, 315);
             this.grafico1.TabIndex = 1;
@@ -58,7 +59,7 @@ namespace PlataformaGruposInvestigacion
             // btnCiudades
             // 
             this.btnCiudades.Location = new System.Drawing.Point(466, 21);
-            this.btnCiudades.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCiudades.Margin = new System.Windows.Forms.Padding(1);
             this.btnCiudades.Name = "btnCiudades";
             this.btnCiudades.Size = new System.Drawing.Size(103, 40);
             this.btnCiudades.TabIndex = 2;
@@ -69,7 +70,7 @@ namespace PlataformaGruposInvestigacion
             // btnArticulos
             // 
             this.btnArticulos.Location = new System.Drawing.Point(466, 88);
-            this.btnArticulos.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnArticulos.Margin = new System.Windows.Forms.Padding(1);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(103, 40);
             this.btnArticulos.TabIndex = 3;
@@ -80,7 +81,7 @@ namespace PlataformaGruposInvestigacion
             // btnRegiones
             // 
             this.btnRegiones.Location = new System.Drawing.Point(466, 155);
-            this.btnRegiones.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnRegiones.Margin = new System.Windows.Forms.Padding(1);
             this.btnRegiones.Name = "btnRegiones";
             this.btnRegiones.Size = new System.Drawing.Size(103, 40);
             this.btnRegiones.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace PlataformaGruposInvestigacion
             // btnAreas
             // 
             this.btnAreas.Location = new System.Drawing.Point(466, 225);
-            this.btnAreas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAreas.Margin = new System.Windows.Forms.Padding(1);
             this.btnAreas.Name = "btnAreas";
             this.btnAreas.Size = new System.Drawing.Size(103, 40);
             this.btnAreas.TabIndex = 5;
@@ -102,7 +103,7 @@ namespace PlataformaGruposInvestigacion
             // btnClasificacion
             // 
             this.btnClasificacion.Location = new System.Drawing.Point(466, 296);
-            this.btnClasificacion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnClasificacion.Margin = new System.Windows.Forms.Padding(1);
             this.btnClasificacion.Name = "btnClasificacion";
             this.btnClasificacion.Size = new System.Drawing.Size(103, 40);
             this.btnClasificacion.TabIndex = 6;
@@ -128,6 +129,7 @@ namespace PlataformaGruposInvestigacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.ClientSize = new System.Drawing.Size(618, 402);
             this.Controls.Add(this.butVolver);
             this.Controls.Add(this.btnClasificacion);
