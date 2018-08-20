@@ -104,6 +104,7 @@ namespace PlataformaGruposInvestigacion
 
             for (int i = 0; i < modelo.Grupos.Capacity && i <= 10; i++)
             {
+           
                 var region = modelo.Grupos[i].Region;
                 var ciudad = modelo.Grupos[i].Ciudad;
                 Console.WriteLine(region + " " + ciudad);
