@@ -38,12 +38,17 @@ namespace PlataformaGruposInvestigacion
             this.Visible = false;
 
         }
+        public void ActualizarGrupo(GrupoInvestigacion a)
+        {
+            modelo.ActualizarGrupo(a);
+            MessageBox.Show("Grupo Actualizado");
+        }
         public GrupoInvestigacion Buscar(String codigo)
         {
 
 
             return modelo.BuscarGrupo(codigo);
-
+ 
         }
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region){
             modelo.AgregarGrupo( nombre,  codigo,  clasificacion,  articulos,  ciudad,  area,  region);
@@ -77,6 +82,11 @@ namespace PlataformaGruposInvestigacion
         public Plataforma darMundo()
         {
             return modelo;
+        }
+
+        private void butCantFrecuenciaArch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

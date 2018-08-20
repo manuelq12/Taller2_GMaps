@@ -70,6 +70,7 @@
             this.butCantFrecuenciaArch.TabIndex = 3;
             this.butCantFrecuenciaArch.Text = "Frecuencia archivos";
             this.butCantFrecuenciaArch.UseVisualStyleBackColor = true;
+            this.butCantFrecuenciaArch.Click += new System.EventHandler(this.butCantFrecuenciaArch_Click);
             // 
             // pictureBox1
             // 

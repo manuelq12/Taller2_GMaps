@@ -33,6 +33,13 @@ namespace PlataformaGruposInvestigacion.modelo
             
             
         }
+        public void ActualizarGrupo(GrupoInvestigacion a)
+        {
+                for (int i = 0; i < grupos.Count; i++)
+                {
+                    if (a.Codigo.Equals(grupos[i])) grupos[i] = a;
+                }
+        }
         public GrupoInvestigacion BuscarGrupo(String codigo)
         {
             GrupoInvestigacion nuevo = null;

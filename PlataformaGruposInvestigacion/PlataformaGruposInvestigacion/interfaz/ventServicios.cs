@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PlataformaGruposInvestigacion.interfaz;
+using PlataformaGruposInvestigacion.modelo;
 using System.Windows.Forms;
 
 namespace PlataformaGruposInvestigacion
@@ -91,5 +92,37 @@ namespace PlataformaGruposInvestigacion
             limpiarBox.borrarCampos(this);
         }
 
+        private void butActualizar_Click(object sender, EventArgs e)
+        {
+            limpiar limpiarCampos = new limpiar();
+            String nombre = txtNombre.Text;
+            String codigo = txtCodigo.Text;
+            String ciudad = txtCiudad.Text;
+            String clasificacion = txtClasificacion.Text;
+            String articulos = txtArticulos.Text;
+            String areaInvestigacion = txtArea.Text;
+            String region = txtRegion.Text;
+
+            GrupoInvestigacion nuevo = ventana.Buscar(codigo);
+            if (nuevo == null)
+            {
+                MessageBox.Show("El codigo de los grupos no se puede modificar");
+            }
+            else
+            {
+                var lista = articulos.Split(' ').Select(i => Int32.Parse(i));
+                List<int> art = new List<int>();
+                List<int> listaNueva = art.Union(lista).ToList<int>();
+
+                nuevo.Nombre = nombre;
+                nuevo.Ciudad = ciudad;
+                nuevo.Clasificacion = clasificacion;
+                nuevo.ArtFrecuentados = listaNueva;
+                nuevo.AreaInvestigacion = areaInvestigacion;
+                nuevo.Region = region;
+                ventana.ActualizarGrupo(nuevo);
+               
+            }
+        }
     }
 }
