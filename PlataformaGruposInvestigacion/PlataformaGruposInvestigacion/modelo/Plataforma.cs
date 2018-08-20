@@ -10,7 +10,6 @@ namespace PlataformaGruposInvestigacion.modelo
         public const String rutaGrupos = "../../Resources/Grupos_de_Investigaci_n_Colombia_2017.csv";
         public const String rutaArticulos = "../../Resources/TransaccionesGruposArticulos.csv";
         private List<GrupoInvestigacion> grupos;
-        private List<int> articulos;
 
         public List<GrupoInvestigacion> Grupos { get => grupos; set => grupos = value; }
 
