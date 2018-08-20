@@ -54,7 +54,16 @@ namespace PlataformaGruposInvestigacion
             }
             else
             {
-                List<int> a =ventana.Buscar(codigo).ArtFrecuentados;
+                List<int> a = new List<int>();
+                try
+                {
+                a =ventana.Buscar(codigo).ArtFrecuentados;
+
+                }
+                catch(Exception en)
+                {
+                    MessageBox.Show("No se encontro el grupo");
+                }
                 String articulos = "";
                 int [] n = a.Where(i=> i!=-1).ToArray();
                 for(int x = 0; x < n.Length; x++)

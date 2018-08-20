@@ -139,5 +139,44 @@ namespace PlataformaGruposInvestigacion
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string codigo = Microsoft.VisualBasic.Interaction.InputBox("Ingresar el codigo del grupo que desea buscar :");
+            GrupoInvestigacion a = Buscar(codigo);
+            if (a == null)
+            {
+                MessageBox.Show("No existe el grupo que desea señalar");
+
+            }
+            else
+            {
+                var locationService = new GoogleLocationService();
+                try
+                {
+                    var point = locationService.GetLatLongFromAddress(a.Region + ", " + a.Ciudad);
+                    if (point != null)
+                    {
+
+                        var latitude = point.Latitude;
+                        var longitude = point.Longitude;
+                        GMapOverlay markersOverlay = new GMapOverlay("Marcador");
+                        GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
+                          GMarkerGoogleType.yellow);
+                        markersOverlay.Markers.Add(marker);
+
+                        marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                        marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
+                        gMapControl1.Overlays.Add(markersOverlay);
+
+                    }
+                }
+                catch (Exception)
+                {
+
+
+                }
+            }
+        }
     }
 }

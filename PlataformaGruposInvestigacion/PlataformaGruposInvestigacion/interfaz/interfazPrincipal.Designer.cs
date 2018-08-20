@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butReportes = new System.Windows.Forms.Button();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // butServicios
             // 
             this.butServicios.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butServicios.Location = new System.Drawing.Point(631, 358);
+            this.butServicios.Location = new System.Drawing.Point(631, 347);
             this.butServicios.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butServicios.Name = "butServicios";
             this.butServicios.Size = new System.Drawing.Size(152, 38);
@@ -96,7 +97,6 @@
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 18;
             this.gMapControl1.MinZoom = 2;
-            this.gMapControl1.MouseWheelZoomEnabled = true;
             this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.gMapControl1.Name = "gMapControl1";
             this.gMapControl1.NegativeMode = false;
@@ -111,13 +111,25 @@
             this.gMapControl1.Zoom = 5D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(631, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 59);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Buscar Mapa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(790, 581);
+            this.ClientSize = new System.Drawing.Size(811, 530);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.butReportes);
             this.Controls.Add(this.pictureBox1);
@@ -140,6 +152,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button butReportes;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
