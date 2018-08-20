@@ -98,6 +98,7 @@ namespace PlataformaGruposInvestigacion.modelo
                         if(contador + 1>= todo.Length) area = "No especificada";
                         else area = todo[contador+1];
                     }
+                    if (ciudad.Contains("/")) ciudad = "Colombia";
                     AgregarGrupo(nombre, codigo, clasi, "-1 -1", ciudad, area, region);
                 }
                 sr.Close();
