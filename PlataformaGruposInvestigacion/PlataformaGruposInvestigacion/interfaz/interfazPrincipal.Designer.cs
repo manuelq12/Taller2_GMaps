@@ -76,7 +76,7 @@
             // butReportes
             // 
             this.butReportes.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butReportes.Location = new System.Drawing.Point(631, 456);
+            this.butReportes.Location = new System.Drawing.Point(631, 504);
             this.butReportes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butReportes.Name = "butReportes";
             this.butReportes.Size = new System.Drawing.Size(152, 45);
@@ -97,6 +97,7 @@
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 18;
             this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomEnabled = true;
             this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.gMapControl1.Name = "gMapControl1";
             this.gMapControl1.NegativeMode = false;
@@ -114,11 +115,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(631, 391);
+            this.button1.Location = new System.Drawing.Point(631, 410);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 59);
+            this.button1.Size = new System.Drawing.Size(152, 72);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Buscar Mapa";
+            this.button1.Text = "Buscar en Mapa";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -128,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlataformaGruposInvestigacion.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(811, 530);
+            this.ClientSize = new System.Drawing.Size(788, 578);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.butReportes);
