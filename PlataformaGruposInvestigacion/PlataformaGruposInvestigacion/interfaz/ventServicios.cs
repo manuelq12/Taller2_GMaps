@@ -123,6 +123,7 @@ namespace PlataformaGruposInvestigacion
                 ventana.ActualizarGrupo(nuevo);
                 limpiar limpiarBox = new limpiar();
                 limpiarBox.borrarCampos(this);
+                ventana.gMapControl1_Load(sender, e);
             }
         }
     }

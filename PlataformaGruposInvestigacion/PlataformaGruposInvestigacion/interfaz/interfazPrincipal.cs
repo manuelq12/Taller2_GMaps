@@ -33,14 +33,14 @@ namespace PlataformaGruposInvestigacion
 
 
         }
-
+       
         private void butServicios_Click(object sender, EventArgs e)
         {
             //Mandar a la ventana Servicios
             Form ventServicios = new ventServicios(this);
             ventServicios.Visible = true;
             ventServicios.Show();
-            this.Visible = false;
+            this.Visible = true;
 
         }
         public void ActualizarGrupo(GrupoInvestigacion a)
@@ -95,7 +95,7 @@ namespace PlataformaGruposInvestigacion
 
         }
 
-        private void gMapControl1_Load(object sender, EventArgs e)
+        public void gMapControl1_Load(object sender, EventArgs e)
         {
             // Initialize map:
             gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
