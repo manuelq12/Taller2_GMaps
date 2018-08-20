@@ -126,7 +126,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(308, 59);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 36);
             this.txtNombre.TabIndex = 6;
@@ -135,7 +135,7 @@
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(308, 104);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(164, 36);
             this.txtCodigo.TabIndex = 7;
@@ -144,7 +144,7 @@
             // 
             this.txtCiudad.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(308, 233);
-            this.txtCiudad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(164, 36);
             this.txtCiudad.TabIndex = 8;
@@ -153,7 +153,7 @@
             // 
             this.txtArea.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArea.Location = new System.Drawing.Point(308, 273);
-            this.txtArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArea.Margin = new System.Windows.Forms.Padding(2);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(164, 36);
             this.txtArea.TabIndex = 9;
@@ -162,7 +162,7 @@
             // 
             this.txtRegion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegion.Location = new System.Drawing.Point(308, 313);
-            this.txtRegion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRegion.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegion.Name = "txtRegion";
             this.txtRegion.Size = new System.Drawing.Size(164, 36);
             this.txtRegion.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.butRegistrar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butRegistrar.Location = new System.Drawing.Point(72, 374);
-            this.butRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.butRegistrar.Name = "butRegistrar";
             this.butRegistrar.Size = new System.Drawing.Size(121, 40);
             this.butRegistrar.TabIndex = 11;
@@ -183,7 +183,7 @@
             // 
             this.butBuscar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butBuscar.Location = new System.Drawing.Point(255, 374);
-            this.butBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.butBuscar.Name = "butBuscar";
             this.butBuscar.Size = new System.Drawing.Size(121, 40);
             this.butBuscar.TabIndex = 12;
@@ -195,7 +195,7 @@
             // 
             this.butActualizar.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butActualizar.Location = new System.Drawing.Point(429, 374);
-            this.butActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.butActualizar.Name = "butActualizar";
             this.butActualizar.Size = new System.Drawing.Size(139, 40);
             this.butActualizar.TabIndex = 13;
@@ -210,7 +210,7 @@
             this.butVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.butVolver.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butVolver.Location = new System.Drawing.Point(9, 414);
-            this.butVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butVolver.Margin = new System.Windows.Forms.Padding(2);
             this.butVolver.Name = "butVolver";
             this.butVolver.Size = new System.Drawing.Size(37, 40);
             this.butVolver.TabIndex = 14;
@@ -245,7 +245,7 @@
             // 
             this.txtClasificacion.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClasificacion.Location = new System.Drawing.Point(308, 144);
-            this.txtClasificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClasificacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtClasificacion.Name = "txtClasificacion";
             this.txtClasificacion.Size = new System.Drawing.Size(164, 36);
             this.txtClasificacion.TabIndex = 17;
@@ -254,7 +254,7 @@
             // 
             this.txtArticulos.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArticulos.Location = new System.Drawing.Point(308, 189);
-            this.txtArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.txtArticulos.Name = "txtArticulos";
             this.txtArticulos.Size = new System.Drawing.Size(164, 36);
             this.txtArticulos.TabIndex = 18;
@@ -286,7 +286,7 @@
             this.Controls.Add(this.labCodigo);
             this.Controls.Add(this.labNombre);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ventServicios";
             this.Text = "ventServicios";
             this.Load += new System.EventHandler(this.ventServicios_Load);
