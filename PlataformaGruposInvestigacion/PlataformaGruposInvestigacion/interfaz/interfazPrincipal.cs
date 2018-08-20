@@ -122,6 +122,9 @@ namespace PlataformaGruposInvestigacion
                             GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
                               GMarkerGoogleType.green);
                             markersOverlay.Markers.Add(marker);
+
+                            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                            marker.ToolTipText = string.Format("Nombre:\n {0} ", modelo.Grupos[i].Nombre);
                             gMapControl1.Overlays.Add(markersOverlay);
 
                         }
