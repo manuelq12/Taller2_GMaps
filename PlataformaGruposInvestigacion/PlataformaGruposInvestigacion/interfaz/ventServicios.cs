@@ -56,7 +56,18 @@ namespace PlataformaGruposInvestigacion
             {
                 List<int> a =ventana.Buscar(codigo).ArtFrecuentados;
                 String articulos = "";
-                a.Where(i=> i!=-1).ToList().ForEach(i=> articulos+= i + " ");
+                int [] n = a.Where(i=> i!=-1).ToArray();
+                for(int x = 0; x < n.Length; x++)
+                {
+                    if(x == n.Length - 1)
+                    {
+                        articulos += n[x];
+                    }
+                    else
+                    {
+                        articulos += n[x] + " ";
+                    }
+                }
                 if (ventana.Buscar(codigo) != null) { 
                 txtNombre.Text = ventana.Buscar(codigo).Nombre;
                 txtCodigo.Text = ventana.Buscar(codigo).Codigo;
@@ -126,5 +137,7 @@ namespace PlataformaGruposInvestigacion
                 ventana.gMapControl1_Load(sender, e);
             }
         }
+
+        
     }
 }
