@@ -34,6 +34,7 @@ namespace PlataformaGruposInvestigacion
 
         private void btnCiudades_Click(object sender, EventArgs e)
         {
+            grafico1.Series.Clear();
             modelo.Plataforma mundo = principal.darMundo();
             String[] ciudadesMas = new string[3];
             int[] cantidadMas = new int[3];
@@ -92,6 +93,75 @@ namespace PlataformaGruposInvestigacion
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Espere 5 seg mientras la nueva informacion es analizada");
+            grafico1.Series.Clear();
+            modelo.Plataforma mundo = principal.darMundo();
+            int[] articulos = new int[3];
+            int[] cantidad = new int[3];
+            List<int> todos = new List<int>();
+            mundo.Grupos.ForEach(i => i.ArtFrecuentados.ForEach(s => todos.Add(s)));
+            var group = todos.GroupBy(i => i);
+            int max1 = 0;
+            int id1 = 0;
+            int max2 = -2;
+            int id2 = 0;
+            int max3 = -4;
+            int id3 = 0;
+            int temp = 0;
+            foreach (IGrouping<int, int> n in group)
+            {
+                temp = n.Count();
+                if (n.Key != -1)
+                {
+                    if (temp > max1)
+                    {
+                        max1 = temp;
+                        id1 = n.Key;
+                    }
+                }
+            }
+            foreach (IGrouping<int, int> n in group)
+            {
+                temp = n.Count();
+                if (n.Key != id1 && n.Key != -1)
+                {
+                    if (temp < max1 && temp > max2)
+                    {
+                        max2 = temp;
+                        id2 = n.Key;
+                    }
+                }
+            }
+            foreach (IGrouping<int, int> n in group)
+            {
+                if (n.Key != id1 && n.Key != id2 && n.Key != -1)
+                {
+                    temp = n.Count();
+                    if (temp < max2 && temp > max3)
+                    {
+                        max3 = temp;
+                        id3 = n.Key;
+                    }
+
+                }
+            }
+            cantidad[0] = max1;
+            cantidad[1] = max2;
+            cantidad[2] = max3;
+            articulos[0] = id1;
+            articulos[1] = id2;
+            articulos[2] = id3;
+
+          for(int x = 0; x < articulos.Length; x++)
+            {
+                Series serie = grafico1.Series.Add(articulos[x].ToString());
+                serie.Label = cantidad[x].ToString();
+                serie.Points.Add(cantidad[x]);
+            }
+
+
+
+
 
         }
 
