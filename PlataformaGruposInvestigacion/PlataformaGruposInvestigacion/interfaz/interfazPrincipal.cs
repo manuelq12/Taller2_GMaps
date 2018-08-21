@@ -101,6 +101,7 @@ namespace PlataformaGruposInvestigacion
             gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Cali, Colombia");
+            
 
             for (int i = 0; i < modelo.Grupos.Capacity && i <= 100; i++)
             {
@@ -122,6 +123,7 @@ namespace PlataformaGruposInvestigacion
                             GMapOverlay markersOverlay = new GMapOverlay("Marcador");
                             GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
                               GMarkerGoogleType.green);
+                           
                             markersOverlay.Markers.Add(marker);
 
                             marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
@@ -150,34 +152,37 @@ namespace PlataformaGruposInvestigacion
 
             }
             else
-            {
-                var locationService = new GoogleLocationService();
-                try
-                {
-                    var point = locationService.GetLatLongFromAddress(a.Region + ", " + a.Ciudad);
-                    if (point != null)
+            {   
+                    var locationService = new GoogleLocationService();
+                    try
+                    {
+                        var point = locationService.GetLatLongFromAddress(a.Region + ", " + a.Ciudad);
+                        if (point != null)
+                        {
+
+                            var latitude = point.Latitude;
+                            var longitude = point.Longitude;
+                            GMapOverlay markersOverlay = new GMapOverlay("Marcador");
+                            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
+                              GMarkerGoogleType.yellow);
+
+                            markersOverlay.Markers.Add(marker);
+
+                            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                            marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
+                            gMapControl1.Overlays.Add(markersOverlay);
+
+                        }
+                    }
+                    catch (Exception)
                     {
 
-                        var latitude = point.Latitude;
-                        var longitude = point.Longitude;
-                        GMapOverlay markersOverlay = new GMapOverlay("Marcador");
-                        GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
-                          GMarkerGoogleType.yellow);
-                        
-                        markersOverlay.Markers.Add(marker);
-                        
-                        marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                        marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
-                        gMapControl1.Overlays.Add(markersOverlay);
 
                     }
-                }
-                catch (Exception)
-                {
-
-
-                }
+                
+                
             }
         }
+        
     }
 }
