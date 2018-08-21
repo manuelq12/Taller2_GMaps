@@ -144,6 +144,7 @@ namespace PlataformaGruposInvestigacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Botón BuscarMapa
             string codigo = Microsoft.VisualBasic.Interaction.InputBox("Ingresar el codigo del grupo que desea buscar :");
             GrupoInvestigacion a = Buscar(codigo);
             if (a == null)
