@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="interfaz\Location.cs" />
+    <Compile Include="interfaz\Municipality.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="interfaz\ventReportes.cs">
       <SubType>Form</SubType>
