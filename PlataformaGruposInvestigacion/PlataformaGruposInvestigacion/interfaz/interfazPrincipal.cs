@@ -62,7 +62,7 @@ namespace PlataformaGruposInvestigacion
         }
         public void AgregarGrupo(String nombre, String codigo, String clasificacion, String articulos, String ciudad, String area, String region)
         {
-            modelo.AgregarGrupo(nombre, codigo, clasificacion, articulos, ciudad, area, region);
+            modelo.AgregarGrupo(nombre, codigo, clasificacion, articulos, ciudad, area, region,0,0,0,0);
 
             MessageBox.Show("Se Agrego el Grupo Correctamente.");
         }
@@ -106,32 +106,26 @@ namespace PlataformaGruposInvestigacion
             gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Cali, Colombia.");
-            gMapControl1.ShowCenter = false;
+            gMapControl1.ShowCenter = true;
 
-            Random r = new Random();
-            for (int i = 0; i < modelo.Grupos.Capacity; i++)
+            for (int i = 0; i < modelo.Grupos.Count(); i++)
             {
-                Municipality s = Locat.MunicipalityList.Find(b => b.Name.Equals(modelo.Grupos.ElementAt(i).Municipality));
-
-                if (s == null)
+                double x1 = modelo.Grupos[i].x1;
+                double x2 = modelo.Grupos[i].x2;
+                double y1 = modelo.Grupos[i].y1;
+                double y2 = modelo.Grupos[i].y2;
+                if(x1!=0&& x2 != 0&& y1!=0 && y2!=0)
                 {
-                    // MessageBox.Show(program.GroupList.ElementAt(i).Municipality);
-                }
-
-                if (s != null)
-                {
-
-                    double x = r.NextDouble() * (s.x1 - s.x2) + s.x2;
-                    double y = r.NextDouble() * (s.y1 - s.y2) + s.y2;
-
-                    //if (program.GroupList.ElementAt(i).Region.Equals("Centro Oriente"))
-                    // {
-                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(y, x), GMarkerGoogleType.red_pushpin);
+                    double x = (x1 - x2) + x2;
+                    double y = (y1 - y2) + y2;
+                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(y, x), GMarkerGoogleType.blue);
+                    marker.IsVisible = (true);
                     markers.Markers.Add(marker);
-
-                    //}
                 }
             }
+
+            gMapControl1.Overlays.Add(markers);
+
         }
 
         private void button1_Click(object sender, EventArgs e)

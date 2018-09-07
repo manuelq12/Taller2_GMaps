@@ -20,11 +20,17 @@ namespace PlataformaGruposInvestigacion.modelo
         private String ciudad;
         private String areaInvestigacion;
         private String region;
+        public double y1 { get; set; }
+        public double x1 { get; set; }
+        public double y2 { get; set; }
+        public double x2 { get; set; }
 
-       //-----------------------------------------------------------------------------------------------------------------
-       //Constructor
-       //-----------------------------------------------------------------------------------------------------------------
-        public GrupoInvestigacion(String nombre, String codigo ,String clasificacion, List<int> articulos, String ciudad, String areaInvestigacion, String region){
+        //-----------------------------------------------------------------------------------------------------------------
+        //Constructor
+        //-----------------------------------------------------------------------------------------------------------------
+        public GrupoInvestigacion(String nombre, String codigo ,String clasificacion, List<int> articulos, String ciudad, String areaInvestigacion, String region
+            ,double y1, double x1, double y2, double x2)
+        {
             this.nombre = nombre;
             this.codigo = codigo; 
             this.clasificacion = clasificacion;
@@ -32,6 +38,10 @@ namespace PlataformaGruposInvestigacion.modelo
             this.ciudad = ciudad;
             this.areaInvestigacion = areaInvestigacion;
             this.region = region;
+            this.y1 = y1;
+            this.x1 = x1;
+            this.y2 = y2;
+            this.x2 = x2;
         }
       //-----------------------------------------------------------------------------------------------------------------
       //Metodos
