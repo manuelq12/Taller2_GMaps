@@ -24,10 +24,12 @@ namespace PlataformaGruposInvestigacion
     {
         private Location Locat;
         private Plataforma modelo;
+        private GMapOverlay overlay;
         public interfazPrincipal()
         {
             Locat = new Location();
             modelo = new Plataforma();
+            overlay = new GMapOverlay("Marcador");
             InitializeComponent();
             modelo.cargarGruposInvestigacion();
             modelo.cargarArticulos();
@@ -102,7 +104,7 @@ namespace PlataformaGruposInvestigacion
         //
         public void gMapControl1_Load(object sender, EventArgs e)
         {
-            GMapOverlay markers = new GMapOverlay("Marcador");
+           
             gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
             gMapControl1.SetPositionByKeywords("Cali, Colombia.");
@@ -120,11 +122,13 @@ namespace PlataformaGruposInvestigacion
                     double y = (y1 - y2) + y2;
                     GMapMarker marker = new GMarkerGoogle(new PointLatLng(y, x), GMarkerGoogleType.blue);
                     marker.IsVisible = (true);
-                    markers.Markers.Add(marker);
+                    marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                    marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", modelo.Grupos[i].Nombre, modelo.Grupos[i].Codigo);
+                    overlay.Markers.Add(marker);
                 }
             }
 
-            gMapControl1.Overlays.Add(markers);
+            gMapControl1.Overlays.Add(overlay);
 
         }
 
@@ -139,36 +143,27 @@ namespace PlataformaGruposInvestigacion
 
             }
             else
-            {   
-                    var locationService = new GoogleLocationService();
-                    try
-                    {
-                        var point = locationService.GetLatLongFromAddress(a.Region + ", " + a.Ciudad);
-                        if (point != null)
-                        {
+            {
+                double x1 = a.x1;
+                double x2 = a.x2;
+                double y1 = a.y1;
+                double y2 = a.y2;
+                if (x1 != 0 && x2 != 0 && y1 != 0 && y2 != 0)
+                {
+                    double x = (x1 - x2) + x2;
+                    double y = (y1 - y2) + y2;
+                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(y, x), GMarkerGoogleType.yellow);
+                    marker.IsVisible = (true);
+                    marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                    marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
+                    overlay.Markers.Add(marker);
+                    gMapControl1.Overlays.Add(overlay);
 
-                            var latitude = point.Latitude;
-                            var longitude = point.Longitude;
-                            GMapOverlay markersOverlay = new GMapOverlay("Marcador");
-                            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
-                              GMarkerGoogleType.yellow);
-
-                            markersOverlay.Markers.Add(marker);
-
-                            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                            marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", a.Nombre, a.Codigo);
-                            gMapControl1.Overlays.Add(markersOverlay);
-
-                        }
-                    }
-                    catch (Exception)
-                    {
-
-
-                    }
-                
-                
+                }
             }
+
+
+
         }
         
     }
