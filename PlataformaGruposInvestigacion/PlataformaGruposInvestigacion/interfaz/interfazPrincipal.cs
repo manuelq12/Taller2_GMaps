@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using GMap.NET.WindowsForms;
 using System.Windows.Forms;
 using PlataformaGruposInvestigacion.modelo;
+using PlataformaGruposInvestigacion.interfaz;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET;
 using System.Collections;
@@ -16,12 +17,16 @@ using GoogleMaps.LocationServices;
 
 namespace PlataformaGruposInvestigacion
 {
+
     public partial class interfazPrincipal : Form
 
+
     {
+        private Location Locat;
         private Plataforma modelo;
         public interfazPrincipal()
         {
+            Locat = new Location();
             modelo = new Plataforma();
             InitializeComponent();
             modelo.cargarGruposInvestigacion();
@@ -97,47 +102,34 @@ namespace PlataformaGruposInvestigacion
         //
         public void gMapControl1_Load(object sender, EventArgs e)
         {
-            // Initialize map:
+            GMapOverlay markers = new GMapOverlay("Marcador");
             gMapControl1.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
-            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
-            gMapControl1.SetPositionByKeywords("Cali, Colombia");
-            
+            GMaps.Instance.Mode = AccessMode.ServerOnly;
+            gMapControl1.SetPositionByKeywords("Cali, Colombia.");
+            gMapControl1.ShowCenter = false;
 
-            for (int i = 0; i < modelo.Grupos.Capacity && i <= 100; i++)
+            Random r = new Random();
+            for (int i = 0; i < modelo.Grupos.Capacity; i++)
             {
-           
-                var region = modelo.Grupos[i].Region;
-                var ciudad = modelo.Grupos[i].Ciudad;
-                Console.WriteLine(region + " " + ciudad);
-                if (region != null && ciudad != null)
+                Municipality s = Locat.MunicipalityList.Find(b => b.Name.Equals(modelo.Grupos.ElementAt(i).Municipality));
+
+                if (s == null)
                 {
-                    var locationService = new GoogleLocationService();
-                    try
-                    {
-                        var point = locationService.GetLatLongFromAddress(region + ", " + ciudad);
-                        if (point != null)
-                        {
-                            
-                            var latitude = point.Latitude;
-                            var longitude = point.Longitude;
-                            GMapOverlay markersOverlay = new GMapOverlay("Marcador");
-                            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(latitude, longitude),
-                              GMarkerGoogleType.green);
-                           
-                            markersOverlay.Markers.Add(marker);
+                    // MessageBox.Show(program.GroupList.ElementAt(i).Municipality);
+                }
 
-                            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
-                            marker.ToolTipText = string.Format("Nombre:\n {0} \n Codigo: \n {1}", modelo.Grupos[i].Nombre, modelo.Grupos[i].Codigo);
-                            gMapControl1.Overlays.Add(markersOverlay);
+                if (s != null)
+                {
 
-                        }
-                    }
-                    catch (Exception)
-                    {
+                    double x = r.NextDouble() * (s.x1 - s.x2) + s.x2;
+                    double y = r.NextDouble() * (s.y1 - s.y2) + s.y2;
 
-                        
-                    }
-                   
+                    //if (program.GroupList.ElementAt(i).Region.Equals("Centro Oriente"))
+                    // {
+                    GMapMarker marker = new GMarkerGoogle(new PointLatLng(y, x), GMarkerGoogleType.red_pushpin);
+                    markers.Markers.Add(marker);
+
+                    //}
                 }
             }
         }

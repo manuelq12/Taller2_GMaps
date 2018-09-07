@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\src\DiagramaModelo.PNG" />
+    <Content Include="Docs\ubicacionesMunicipios.txt" />
     <Content Include="GoogleMaps.LocationServices.readme.txt" />
   </ItemGroup>
   <ItemGroup />

@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
+
 
 namespace PlataformaGruposInvestigacion.interfaz
 {
@@ -22,7 +26,7 @@ namespace PlataformaGruposInvestigacion.interfaz
 
             try
             {
-                StreamReader sr = new StreamReader(@"C:\Users\Sara\Source\Repos\GMaps-.NET\WindowsFormsApp1\WindowsFormsApp1\Datos\ubicacionesMunicipios.txt");
+                StreamReader sr = new StreamReader("../../Docs/ubicacionesMunicipios.txt");
 
                 String line;
                 int c = 0;
